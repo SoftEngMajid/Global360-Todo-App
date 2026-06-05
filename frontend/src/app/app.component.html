@@ -1,0 +1,30 @@
+<div style="max-width: 600px; margin: 40px auto; font-family: sans-serif;">
+  
+  <h2>My To-Do List</h2>
+
+  <!-- Add Item Form -->
+  <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <input 
+      type="text" 
+      [(ngModel)]="newTodoTitle" 
+      placeholder="What needs to be done?" 
+      style="flex: 1; padding: 8px;"
+      (keyup.enter)="addTodo()"
+    />
+    <button (click)="addTodo()" style="padding: 8px 16px; cursor: pointer;">Add</button>
+  </div>
+
+  <!-- Todo List -->
+  <ul style="list-style-type: none; padding: 0;">
+    <!-- Angular's new control flow syntax to loop over items -->
+    @for (todo of todos; track todo.id) {
+      <li style="display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ccc;">
+        <span>{{ todo.title }}</span>
+        <button (click)="deleteTodo(todo.id)" style="color: red; cursor: pointer;">Delete</button>
+      </li>
+    } @empty {
+      <li style="padding: 10px; color: gray;">No items in the list. Add one above!</li>
+    }
+  </ul>
+
+</div>
