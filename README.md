@@ -2,7 +2,7 @@
 
 This project is a full-stack To-Do application built to demonstrate a clean, decoupled integration between an Angular frontend and a .NET backend, complete with automated end-to-end testing.
 
-![App Screenshot Placeholder]<img width="955" height="608" alt="app-screenshot" src="https://github.com/user-attachments/assets/93080a19-2cf6-4505-814c-97a1b96ed6b3" />
+<img width="955" height="608" alt="app-screenshot" src="https://github.com/user-attachments/assets/93080a19-2cf6-4505-814c-97a1b96ed6b3" />
 
 ## Tech Stack
 * **Frontend:** Angular 17+ (Standalone Components)
